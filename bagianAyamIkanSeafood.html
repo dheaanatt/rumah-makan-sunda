@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="imgs/RUMAH MAKAN SUNDA DEAA & OGIKK.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAGIAN PERGORENGAN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="MenuBG">
+    <script src="scripts.js"></script>
+    <br>
+    <div class="panel3">
+        <div class="backBtn" id="subMenuBackBtn"><h1><</h1></div>
+        <div><h1>PERLAUKAN COYY</h1></div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="item">
+            <img src="ayam ikan seafood/udang goreng tepung.jpeg" alt="KATEGORI AYAM IKAN SEAFOOD" class="kategoriImg" id="udangGorengTepung">
+            <h4>Udang Goreng Tepung</h4>
+        </div>
+        <div class="item">
+            <img src="ayam ikan seafood/cumi goreng tepung.jpg" alt="KATEGORI AYAM IKAN SEAFOOD" class="kategoriImg" id="cumiGorengTepung">
+            <h4>Cumi Goreng Tepung</h4>
+        </div>
+        <div class="item">
+            <img src="ayam ikan seafood/gurame goreng asam manis.webp" alt="KATEGORI AYAM IKAN SEAFOOD" class="kategoriImg" id="gurameGorengAsamManis">
+            <h4>Gurame Goreng Asam Manis</h4>
+        </div>
+        <div class="item">
+            <img src="ayam ikan seafood/udang asam manis.jpg" alt="KATEGORI AYAM IKAN SEAFOOD" class="kategoriImg" id="udangAsamManis">
+            <h4>Udang Asam Manis</h4>
+        </div>
+        <div class="item">
+            <img src="ayam ikan seafood/gurame goreng.jpg" alt="KATEGORI AYAM IKAN SEAFOOD" class="kategoriImg" id="gurameGoreng">
+            <h4>Gurame Goreng</h4>
+        </div>
+        <div class="item">
+            <img src="ayam ikan seafood/ayam goreng.jpg" alt="KATEGORI AYAM IKAN SEAFOOD" class="kategoriImg" id="ayamGoreng">
+            <h4>Ayam Goreng</h4>
+        </div>
+        <div class="item">
+            <img src="ayam ikan seafood/cumi asam manis.jpeg" alt="KATEGORI AYAM IKAN SEAFOOD" class="kategoriImg" id="cuemiAsamManis">
+            <h4>Cumi Asam Manis</h4>
+        </div>
+        <div class="item">
+            <img src="ayam ikan seafood/ayam goreng kremes.webp" alt="KATEGORI AYAM IKAN SEAFOOD" class="kategoriImg" id="ayamGorengKremes">
+            <h4>Ayam Goreng Kremes</h4>
+        </div>
+        <div class="item">
+            <img src="ayam ikan seafood/ayam bakar.jpg" alt="KATEGORI AYAM IKAN SEAFOOD" class="kategoriImg" id="ayamBakar">
+            <h4>Ayam Bakar</h4>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="darkArea"></div>
+    <div class="bs1" id="bsf1"></div>
+    <audio id="myAudio" loop autoplay>
+        <source src="backsoundnyakak.mp3" type="audio/mp3">
+        </audio>
+        
+        <script>
+        var audio = document.getElementById("myAudio");
+        
+        function playAudio() {
+            audio.play();
+        }
+        
+        window.addEventListener('beforeunload', function(event) {
+            sessionStorage.setItem('audioPosition', audio.currentTime);
+        });
+        
+        window.addEventListener('load', function(event) {
+            var savedPosition = sessionStorage.getItem('audioPosition');
+            if (savedPosition !== null) {
+            audio.currentTime = parseFloat(savedPosition);
+            }
+            playAudio();
+        });
+        </script>
+</body>
+
+<style>
+    .panel3 {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+    .nasiBtn {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+
+    @keyframes popUp {
+        from {
+            opacity: 0;
+            margin-top: -100px;
+        }
+        to {
+            opacity: 1;
+            margin-top: 0;
+        }
+    }
+</style>

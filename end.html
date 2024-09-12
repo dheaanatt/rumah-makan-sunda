@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="imgs/RUMAH MAKAN SUNDA DEAA & OGIKK.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERIMAKASIH SUDAH MEMESAN!</title>
+</head> 
+<body class="MenuBG">
+    <script src="scripts.js"></script>
+    <div class="panel3">
+        <div><h1>TERIMAKASIH SUDAH MEMESAN</h1></div>
+    </div>
+    <div class="paymentPanelFlex">
+        <div class="tandaPesanan">
+            <div class="panelTeks"><h1 id="teksPesanan"></h1></div>
+            <div class="pesananPanel12">
+                <div class="panelPilihan" id="panelPilihan">
+                    <div id="">
+                        <br>
+                        <h1 id="h1pp">NO PESANAN ANDA #000</h1>
+                        <h2 id="h2pp">MAU MAKAN DIMANA?<br><br> </h2>
+                        <br>
+                    </div>
+                </div>
+                <br>
+                <div class="pilihan">
+                    <div class="btnPilihan" id="btnPilihan1">MAKAN DI TEMPAT</div>
+                    <div class="btnPilihan" id="btnPilihan2">BAWA PULANG</div>
+                </div>
+                <br>
+            </div>
+            <br>
+            <div class="bekBtn" id="bekBtn">
+                <div class="panel5" id="backBtn"><div><h1>KEMBALI KE HALAMAN UTAMA</h1></div></div>
+                <div class="panel5" id="subMenuBackBtn"><div><h1>KEMBALI KE HALAMAN MENU</h1></div></div>
+            </div>
+            <br>
+            <br>
+        </div>
+        <div class="strukBelanja" id="strukBelanja">
+            <div>
+                <div class="panel4"><h1>STRUK PESANAN ANDA</h1></div>
+                <div class="lnp42"></div>
+                <p class="pPanel4">
+                    <a id="noPesanan">NO PESANAN</a> <br>
+                    <a id="statusPesanan">MAKAN DISINI / BAWA PULANG</a>
+                </p>
+                <div class="lnp42"></div>
+                <p class="pPanel4">
+                    NAMA PESANAN : <a id="namaPesanan">nama makanan</a> <br>
+                    HARGA PESANAN : <a id="hargaPesanan">harga pesanan</a> <br>
+                    TAX : <a id="biayaLayanan">biayaLayanan</a> <br>
+                </p>
+                <div class="lnp4"></div>
+                <p class="pPanel4">
+                    TOTAL HARGA : <a id="totalHarga">total harga</a>
+                </p>
+                <div class="lnp42"></div>
+                <p class="pPanel4" style="text-align: center;">
+                    <a id="tanggalSekarang">TANGGAL SEKARANG</a> <br>
+                    RUMAH MAKAN SUNDA COYY 2024 <br>
+                    COPYRIGHT DEAA DEEOGIKK X RPL 2024
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="darkArea"></div>
+    <div class="bs1" id="bsf1"></div>
+    <audio id="myAudio" loop autoplay>
+        <source src="backsoundnyakak.mp3" type="audio/mp3">
+        </audio>
+        
+        <script>
+        var audio = document.getElementById("myAudio");
+        
+        function playAudio() {
+            audio.play();
+        }
+        
+        window.addEventListener('beforeunload', function(event) {
+            sessionStorage.setItem('audioPosition', audio.currentTime);
+        });
+        
+        window.addEventListener('load', function(event) {
+            var savedPosition = sessionStorage.getItem('audioPosition');
+            if (savedPosition !== null) {
+            audio.currentTime = parseFloat(savedPosition);
+            }
+            playAudio();
+        });
+        </script>
+</body>
+</html>
+
+<style>
+    .panel4 {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+    .pesananPanel12 {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+
+    @keyframes popUp {
+        from {
+            opacity: 0;
+            margin-top: -100px;
+            filter: blur(5px);
+        }
+        to {
+            opacity: 1;
+            margin-top: 0;
+            filter: blur(0px);
+        }
+    }
+</style>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="imgs/RUMAH MAKAN SUNDA DEAA & OGIKK.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAGIAN LAIN LAIN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="MenuBG">
+    <script src="scripts.js"></script>
+    <br>
+    <div class="panel3">
+        <div class="backBtn" id="subMenuBackBtn"><h1><</h1></div>
+        <div><h1>DAN LAINNYA</h1></div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="item">
+            <img src="lain lain/babat goreng.jpg" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="babatGoreng">
+            <h4>Babat Goreng</h4>
+        </div>
+        <div class="item">
+            <img src="lain lain/karedok.avif" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="karedok">
+            <h4>Karedok</h4>
+        </div>
+        <div class="item">
+            <img src="lain lain/lalapan fix.jpg" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="lalapan">
+            <h4>Lalapan</h4>
+        </div>
+        <div class="item">
+            <img src="lain lain/pepes jamur.jpe" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="pepesJamur">
+            <h4>Pepes Jamur</h4>
+        </div>
+        <div class="item">
+            <img src="lain lain/pepes tahu.jpg" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="pepesTahu">
+            <h4>Pepes Tahu</h4>
+        </div>
+        <div class="item">
+            <img src="lain lain/pete goreng.jpg" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="peteGoreng">
+            <h4>Pete Goreng</h4>
+        </div>
+        <div class="item">
+            <img src="lain lain/pete bakar.jpg" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="peteBakar">
+            <h4>Pete Bakar</h4>
+        </div>
+        <div class="item">
+            <img src="lain lain/tahu goreng crispy.jpg" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="tahuGorengCrispy">
+            <h4>Tahu Goreng Crispy</h4>
+        </div>
+        <div class="item">
+            <img src="lain lain/tahu seuhah.jpg" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="tahuSeuhah">
+            <h4>Tahu Seuhah</h4>
+        </div>
+        <div class="item">
+            <img src="lain lain/tempe goreng.jpg" alt="KATEGORI LAIN LAIN" class="kategoriImg" id="tempeGoreng">
+            <h4>Tempe Goreng</h4>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="darkArea"></div>
+    <div class="bs1" id="bsf1"></div>
+    <audio id="myAudio" loop autoplay>
+        <source src="backsoundnyakak.mp3" type="audio/mp3">
+        </audio>
+        
+        <script>
+        var audio = document.getElementById("myAudio");
+        
+        function playAudio() {
+            audio.play();
+        }
+        
+        window.addEventListener('beforeunload', function(event) {
+            sessionStorage.setItem('audioPosition', audio.currentTime);
+        });
+        
+        window.addEventListener('load', function(event) {
+            var savedPosition = sessionStorage.getItem('audioPosition');
+            if (savedPosition !== null) {
+            audio.currentTime = parseFloat(savedPosition);
+            }
+            playAudio();
+        });
+        </script>
+</body>
+</html>
+
+<style>
+    .panel3 {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+    .nasiBtn {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+
+    @keyframes popUp {
+        from {
+            opacity: 0;
+            margin-top: -100px;
+        }
+        to {
+            opacity: 1;
+            margin-top: 0;
+        }
+    }
+</style>

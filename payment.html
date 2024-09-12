@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="imgs/RUMAH MAKAN SUNDA DEAA & OGIKK.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYMENT</title>
+</head>
+<body class="MenuBG">
+    <script src="scripts.js"></script>
+    <div class="panel3">
+        <div class="backBtn" id="backToMenu"><h1><</h1></div>
+        <div><h1>PESANAN LU COYY</h1></div>
+    </div>
+    <div class="panelPayment">
+        <div id="imgPayJS" class="imgPay"></div>
+        <div class="foodPanel">
+            <h1 id="foodName"></h1>
+            <div class="panelharga">
+                <h2>Harga : Rp</h2>
+                <h2 id="hargaMakanan"></h2>
+            </div>
+            <div class="pesanSekarang" id="pesanSekarang">PESAN SEKARANG</div>
+        </div>
+    </div>
+    <div class="darkArea"></div>
+    <div class="bs1" id="bsf1"></div>
+    <audio id="myAudio" loop autoplay>
+        <source src="backsoundnyakak.mp3" type="audio/mp3">
+        </audio>
+        
+        <script>
+        var audio = document.getElementById("myAudio");
+        
+        function playAudio() {
+            audio.play();
+        }
+        
+        window.addEventListener('beforeunload', function(event) {
+            sessionStorage.setItem('audioPosition', audio.currentTime);
+        });
+        
+        window.addEventListener('load', function(event) {
+            var savedPosition = sessionStorage.getItem('audioPosition');
+            if (savedPosition !== null) {
+            audio.currentTime = parseFloat(savedPosition);
+            }
+            playAudio();
+        });
+        </script>
+</body>
+</html>
+
+<style>
+    .panel3 {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+    .panelPayment {
+        animation: popUp1 1s;
+        opacity: 1;
+    }
+
+    @keyframes popUp {
+        from {
+            opacity: 0;
+            margin-top: -100px;
+            filter: blur(5px);
+        }
+        to {
+            opacity: 1;
+            margin-top: 0;
+            filter: blur(0px);
+        }
+    }
+    @keyframes popUp1 {
+        from {
+            opacity: 0;
+            margin-top: -100px;
+            filter: blur(5px);
+        }
+        to {
+            opacity: 1;
+            margin-top: 10px;
+            filter: blur(0px);
+        }
+    }
+</style>

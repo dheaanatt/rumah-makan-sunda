@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="imgs/RUMAH MAKAN SUNDA DEAA & OGIKK.png" type="image/x-icon">
+    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RUMAH MAKAN SUNDA COYY</title>
+    <link rel="shortcut icon" href="imgs/RUMAH MAKAN SUNDA DEAA & OGIKK.png" type="image/x-icon">
+</head>
+<body class="HomeBG" id="HomeBG">
+    <script src="scripts.js"></script>
+
+    <div class="frontHeader">
+        <div class="headerButton" id="switchPageBtn1"><h4>ABOUT</h4></div>
+        <div class="headerButton" id="switchPageBtn2"><h4>CONTACT</h4></div>
+    </div>
+    <br>
+    <div><h1 class="TITLE">RUMAH MAKAN <br> SUNDA COYY</h1></div>
+    <br>
+    <div class="darkArea">
+        <center><div style="width: auto; margin-top: 100px;"><img src="imgs/down-arrow-5.png" width="50px"></div></center>
+        <div class="panelMenu">
+            <center>
+                <div id="PreviewMakanan" class="prevMakanan">
+                    <h1 >MENU BEST SELLER KAMI COYY</h1>
+                    <video  autoplay muted loop src="video/RESEP IKAN GURAME SAUS ASAM MANIS ALA RESTORAN SEAFOOD ENAKNYA BIKIN NAGIH - 1080.mp4" class="kategoriImg1" id="ayamIkanBtn"></video>
+                    <img src="nasi/Nasi Timbel Komplit.jpg" alt="BEST SELLER" class="kategoriImg1" id="nasiBtn">
+                    <video autoplay muted loop src="video/0212.mp4" class="kategoriImg1" id="lainLainBtn"></video>
+                    <br>
+                    <br>
+                    <div class="liatLainnya" id="liatLainnya">LIHAT LAINNYA</div>
+                </div>
+            </center >
+        </div>
+    </div>
+    <audio id="myAudio" loop autoplay>
+        <source src="backsoundnyakak.mp3" type="audio/mp3">
+        </audio>
+        
+        <script>
+        var audio = document.getElementById("myAudio");
+        
+        function playAudio() {
+            audio.play();
+        }
+        
+        window.addEventListener('beforeunload', function(event) {
+            sessionStorage.setItem('audioPosition', audio.currentTime);
+        });
+        
+        window.addEventListener('load', function(event) {
+            var savedPosition = sessionStorage.getItem('audioPosition');
+            if (savedPosition !== null) {
+            audio.currentTime = parseFloat(savedPosition);
+            }
+            playAudio();
+        });
+        </script>
+</body>
+</html>
+
+<style>
+    .frontHeader {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+
+    @keyframes popUp {
+        from {
+            opacity: 0;
+            margin-top: -100px;
+            filter: blur(5px);
+        }
+        to {
+            opacity: 1;
+            margin-top: 0;
+            filter: blur(0px);
+        }
+    }
+</style>

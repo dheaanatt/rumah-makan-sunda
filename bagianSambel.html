@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="imgs/RUMAH MAKAN SUNDA DEAA & OGIKK.png" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAGIAN PERSAMBELAN</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="MenuBG">
+    <script src="scripts.js"></script>
+    <br>
+    <div class="panel3">
+        <div class="backBtn" id="subMenuBackBtn"><h1><</h1></div>
+        <div><h1>PERSAMBELAN COYY</h1></div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="item">
+            <img src="sambel/sambel dadak.jpg" alt="KATEGORI SAMBEL" class="kategoriImg" id="sambelDadak">
+            <h4>Sambel Dadak</h4>
+        </div>
+        <div class="item">
+            <img src="sambel/sambel hijau.jpg" alt="KATEGORI SAMBEL" class="kategoriImg" id="sambelHijau">
+            <h4>Sambel Hijau</h4>
+        </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="darkArea"></div>
+    <div class="bs1" id="bsf1"></div>
+    <audio id="myAudio" loop autoplay>
+        <source src="backsoundnyakak.mp3" type="audio/mp3">
+        </audio>
+        
+        <script>
+        var audio = document.getElementById("myAudio");
+        
+        function playAudio() {
+            audio.play();
+        }
+        
+        window.addEventListener('beforeunload', function(event) {
+            sessionStorage.setItem('audioPosition', audio.currentTime);
+        });
+        
+        window.addEventListener('load', function(event) {
+            var savedPosition = sessionStorage.getItem('audioPosition');
+            if (savedPosition !== null) {
+            audio.currentTime = parseFloat(savedPosition);
+            }
+            playAudio();
+        });
+        </script>
+</body>
+</html>
+
+<style>
+    .panel3 {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+    .nasiBtn {
+        animation: popUp 1s;
+        opacity: 1;
+    }
+
+    @keyframes popUp {
+        from {
+            opacity: 0;
+            margin-top: -100px;
+        }
+        to {
+            opacity: 1;
+            margin-top: 0;
+        }
+    }
+</style>
